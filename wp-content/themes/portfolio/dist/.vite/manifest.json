@@ -1,0 +1,53 @@
+{
+  "wp-content/themes/portfolio/src/css/style.scss": {
+    "file": "assets/css-CdehZanf.css",
+    "src": "wp-content/themes/portfolio/src/css/style.scss",
+    "isEntry": true
+  },
+  "wp-content/themes/portfolio/src/fonts/Montserrat-Regular.ttf": {
+    "file": "assets/Montserrat-Regular-Cyjg2l_H.ttf",
+    "src": "wp-content/themes/portfolio/src/fonts/Montserrat-Regular.ttf"
+  },
+  "wp-content/themes/portfolio/src/fonts/Oxanium-Bold.woff2": {
+    "file": "assets/Oxanium-Bold-BrnJxCXs.woff2",
+    "src": "wp-content/themes/portfolio/src/fonts/Oxanium-Bold.woff2"
+  },
+  "wp-content/themes/portfolio/src/fonts/Oxanium-ExtraLight.woff2": {
+    "file": "assets/Oxanium-ExtraLight-B8xrC-I2.woff2",
+    "src": "wp-content/themes/portfolio/src/fonts/Oxanium-ExtraLight.woff2"
+  },
+  "wp-content/themes/portfolio/src/fonts/Oxanium-Light.woff2": {
+    "file": "assets/Oxanium-Light-CSuW-UAx.woff2",
+    "src": "wp-content/themes/portfolio/src/fonts/Oxanium-Light.woff2"
+  },
+  "wp-content/themes/portfolio/src/fonts/Oxanium-Medium.woff2": {
+    "file": "assets/Oxanium-Medium-BNwNf3zK.woff2",
+    "src": "wp-content/themes/portfolio/src/fonts/Oxanium-Medium.woff2"
+  },
+  "wp-content/themes/portfolio/src/fonts/Oxanium-Regular.woff2": {
+    "file": "assets/Oxanium-Regular-sCY8Do8e.woff2",
+    "src": "wp-content/themes/portfolio/src/fonts/Oxanium-Regular.woff2"
+  },
+  "wp-content/themes/portfolio/src/fonts/Preahvihear-Regular.ttf": {
+    "file": "assets/Preahvihear-Regular-FNdz2H50.ttf",
+    "src": "wp-content/themes/portfolio/src/fonts/Preahvihear-Regular.ttf"
+  },
+  "wp-content/themes/portfolio/src/img/arrow-project.svg": {
+    "file": "assets/arrow-project-C66oaial.svg",
+    "src": "wp-content/themes/portfolio/src/img/arrow-project.svg"
+  },
+  "wp-content/themes/portfolio/src/img/background-front.svg": {
+    "file": "assets/background-front-Dl7MIl5r.svg",
+    "src": "wp-content/themes/portfolio/src/img/background-front.svg"
+  },
+  "wp-content/themes/portfolio/src/img/logo-github.svg": {
+    "file": "assets/logo-github-Z8TVI4-r.svg",
+    "src": "wp-content/themes/portfolio/src/img/logo-github.svg"
+  },
+  "wp-content/themes/portfolio/src/js/main.js": {
+    "file": "assets/js-VzVKCqJQ.js",
+    "name": "js",
+    "src": "wp-content/themes/portfolio/src/js/main.js",
+    "isEntry": true
+  }
+}

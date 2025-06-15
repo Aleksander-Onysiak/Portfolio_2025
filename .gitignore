@@ -4,6 +4,9 @@
 wp-content/*
 !wp-content/themes
 wp-content/themes/*
-!wp-content/theme/Portfolio_2025
-!wp-content/themes/Portfolio_2025/*
-!wp-content/themes/Portfolio_2025/*/*
+!wp-content/themes/portfolio
+!wp-content/themes/portfolio/*
+!wp-content/themes/portfolio/**/*
+!vite.config.js
+!package.json
+!postcss.config.js

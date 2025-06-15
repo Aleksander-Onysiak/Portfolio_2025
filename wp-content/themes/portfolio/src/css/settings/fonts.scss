@@ -1,0 +1,54 @@
+$font-path : '/wp-content/themes/portfolio/src/fonts';
+
+@font-face {
+  font-family: "Preahvihear" ;
+  font-style: normal;
+  font-display: swap;
+  src: url("#{$font-path}/Preahvihear-Regular.ttf") format("TrueType");
+}
+@font-face {
+  font-family: "Montserrat" ;
+  font-style: normal;
+  font-display: swap;
+  src: url("#{$font-path}/Montserrat-Regular.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "Oxanium" ;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("#{$font-path}/Oxanium-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Oxanium" ;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("#{$font-path}/Oxanium-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Oxanium" ;
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("#{$font-path}/Oxanium-ExtraLight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Oxanium" ;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("#{$font-path}/Oxanium-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Oxanium" ;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("#{$font-path}/Oxanium-Medium.woff2") format("woff2");
+}

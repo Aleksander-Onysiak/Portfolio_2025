@@ -1,0 +1,142 @@
+@use "../visuals/colors" as c;
+@use "../utils/fonts" as f;
+
+.btn-contact,
+.btn {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oxanium', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 64px;
+  background-color: #32383E;
+  border: 2px solid #56F4FF;
+  filter: drop-shadow(0px 2px 6px rgba(86, 244, 255, 0));
+  transition: filter 250ms ease-in-out;
+  margin-bottom: 4rem;
+
+  &:focus,
+  &:hover {
+    filter: drop-shadow(0px 2px 6px rgba(86, 244, 255, 0.4));
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.front-project__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.front-project__btn {
+  flex: 0 0 30%;
+  text-align: right;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.stage__cts-btn {
+  display: none;
+
+  @media screen and (min-width: 600px) {
+    border-color: c.$colorLighterBlue;
+    background-color: transparent;
+    @include f.Poppins-Regular;
+    color: c.$colorWhite;
+    text-transform: uppercase;
+    border-radius: 32px;
+    padding: 16px 23px;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    &:hover {
+      background-color: c.$colorWhite;
+      border: 2px solid c.$colorLighterBlue;
+      color: c.$colorBlack;
+      text-transform: uppercase;
+      box-shadow: 0 0 8px c.$colorLighterBlue,
+      0 0 15px c.$colorLighterBlue,
+      0 0 20px c.$colorLighterBlue,
+      0 0 30px c.$colorLighterBlue;
+    }
+  }
+}
+
+
+.btn-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @media screen and (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.project_link-a {
+  padding: 5%;
+  margin: 5%;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.link, .git {
+  padding: 2% 5%;
+  @include f.Poppins-Regular;
+  font-size: 1rem;
+  background-color: c.$colorWhite;
+  border: none;
+  color: c.$colorBlack;
+  border-radius: 3rem;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: c.$colorWhite;
+    border: 2px solid c.$colorLighterBlue;
+    color: c.$colorBlack;
+    text-transform: uppercase;
+    box-shadow: 0 0 8px c.$colorLighterBlue,
+    0 0 15px c.$colorLighterBlue,
+    0 0 20px c.$colorLighterBlue,
+    0 0 30px c.$colorLighterBlue;
+  }
+
+  @media screen and (min-width: 600px) {
+    padding: 2% 5%;
+    @include f.Poppins-Regular;
+    font-size: 1rem;
+    background-color: c.$colorWhite;
+    border: none;
+    color: c.$colorBlack;
+    border-radius: 3rem;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: c.$colorWhite;
+      border: 2px solid c.$colorLighterBlue; /* border correcte */
+      color: c.$colorBlack;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      box-shadow: 0 0 8px c.$colorLighterBlue,
+      0 0 15px c.$colorLighterBlue,
+      0 0 20px c.$colorLighterBlue,
+      0 0 30px c.$colorLighterBlue;
+    }
+  }
+}

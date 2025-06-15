@@ -1,0 +1,21 @@
+@use "../../utils/fonts" as f;
+@use "../../visuals/buttons" as b;
+@use "../../visuals/colors" as c;
+
+.front-quote {
+  &-container {
+    margin: 0 25%;
+    text-align: center;
+  }
+
+  &-paraf {
+    @include f.Poppins-Light;
+  }
+
+  &-btn {
+    font-weight: bold;
+    padding: 16px 23px;
+    margin-left: 5%;
+    border-radius: 32px;
+  }
+}

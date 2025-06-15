@@ -1,0 +1,83 @@
+@use "../utils/fonts" as f;
+@use "../visuals/buttons" as b;
+@use "../visuals/colors" as c;
+
+html {
+  background-color: c.$colorBG;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-contact-a {
+  color: c.$colorWhite;
+
+  &:hover {
+    color: c.$colorBlack;
+  }
+}
+
+main {
+  color: c.$colorWhite;
+}
+
+.title {
+  @include f.Montserrat-Bold;
+  font-size: 3rem;
+  margin: 10%;
+  color: c.$colorWhite;
+
+  &_a {
+    text-align: center;
+    &:checked{
+      color: c.$colorWhite;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    @include f.Montserrat-Bold;
+    font-size: 5.375rem;
+    margin: 0 25% 0 5%;
+    color: c.$colorWhite;
+  }
+}
+
+.subtitle {
+  @include f.Poppins-Regular;
+  font-size: 48px;
+  margin: 0 5%;
+  color: c.$colorWhite;
+  text-decoration: none;
+}
+
+.title, .subtitle {
+  text-align: center;
+  margin: 0 15%;
+}
+
+body {
+  margin: 0;
+  background: #1E2C34;
+  background: linear-gradient(90deg,rgba(30, 44, 52, 1) 0%, rgba(24, 25, 33, 1) 100%);
+}
+
+.svg_planets {
+  position: relative;
+}
+
+.planet_svg {
+  position: absolute;
+
+  &-1 {
+
+  }
+
+  &-2 {
+
+  }
+
+  &-3 {
+
+  }
+}

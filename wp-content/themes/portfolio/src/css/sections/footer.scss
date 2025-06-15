@@ -1,0 +1,163 @@
+@use "../utils/fonts" as f;
+@use "../visuals/colors" as c;
+
+.footer {
+  padding: 2%;
+  max-width: 100%;
+  min-width: 50%;
+  @media (min-width: 768px) {
+    max-width: 100%;
+  }
+
+  .footer-bottom__reserved {
+    display: block;
+    padding-top: 0.8rem;
+    @include f.Oxanium-Light;
+    color: c.$colorLighterBlue;
+  }
+
+  &__div {
+    font-size: 1rem;
+    padding: 2em 0;
+    max-width: 100%;
+
+    &__title {
+      @include f.Montserrat-Bold;
+      font-size: 1.5rem;
+      color: c.$colorWhite;
+      font-weight: 900;
+      text-align: left;
+
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+    }
+
+    &__p {
+      @include f.Poppins-Light;
+      white-space: pre-line;
+      padding: 1.5em 0 0 0;
+      max-width: 30em;
+      font-weight: 100;
+      color: c.$colorWhite;
+      font-size: 1rem;
+      text-align: left;
+
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+    }
+  }
+
+  &__section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-top: 2px solid c.$colorWhite;
+    border-bottom: 2px solid c.$colorWhite;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+    }
+
+    @media (min-width: 1500px) {
+      display: flex;
+      flex-direction: row;
+      gap: 48px;
+    }
+  }
+
+  &-span {
+    @include f.Poppins-Light;
+    padding: 2em 0;
+  }
+
+  &-menu {
+    display: block;
+    text-align: center;
+
+    &__sublist {
+      list-style-type: none;
+      display: block;
+      padding: 0;
+      margin: 0;
+
+      &__title {
+        @include f.Montserrat-Bold;
+        font-size: 1.2rem;
+        color: c.$colorWhite;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        text-align: left;
+
+        @media (min-width: 768px) {
+          margin-bottom: 1em;
+          text-align: left;
+        }
+      }
+
+      &-item {
+        @include f.Poppins-Light ;
+        padding: 0.5em 0 0.5em 0;
+        text-align: left;
+        font-weight: 400;
+        color: c.$colorWhite;
+        font-size: 1rem;
+        transition: color 250ms ease-in-out;
+
+        @media (min-width: 768px) {
+          text-align: left;
+        }
+
+        a {
+          color: white;
+          transition: color 250ms ease-in-out;
+
+          &:hover {
+            color: c.$colorLighterBlue;
+          }
+        }
+
+        &__content {
+          text-decoration: none;
+          color: c.$colorWhite;
+          pointer-events: auto;
+        }
+
+        &__content:hover {
+          color: c.$colorLighterBlue;
+        }
+      }
+    }
+  }
+
+  -menu__sub-item {
+    &:hover {
+      font-weight: bold;
+
+    }
+  }
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px); /* 1 */
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%); /* 2 */
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.footer__menu + .footer__menu, .footer__menu + .footer-menu__sublist__title {
+  cursor: default;
+  pointer-events: none;
+}

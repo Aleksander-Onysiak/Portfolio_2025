@@ -1,0 +1,82 @@
+@use "../utils/fonts" as f;
+@use "../visuals/buttons" as b;
+@use "../visuals/colors" as c;
+
+.contact {
+  background-color: c.$colorBG;
+}
+
+.contact__h2 {
+  @include f.Montserrat-Regular;
+  font-size: 2rem;
+  margin: 0 5%;
+  max-width: 1024px;
+  padding-top: 5rem;
+  @media screen and (min-width: 600px) {
+    font-size: 3rem;
+    margin: 0 auto;
+    max-width: 1024px;
+    padding-top: 10rem;
+  }
+}
+
+/*label {
+  font-size: 0.001px;
+}*/
+
+.field__input,
+.field input[type="text"], .field input[type="tel"], .field input[type="email"], .field input[type="textarea"] .field input[placeholder="Votre message ici"] {
+  border-radius: 8px;
+
+  padding: 8px;
+  background-color: #27282F;
+  border: 2px solid #35373D;
+  transition: border 250ms ease-in-out;
+
+  &:focus {
+    border: 2px solid c.$colorLighterBlue;
+  }
+}
+
+.field__label {
+  font-size: 1rem;
+  color: c.$colorWhite;
+  @media screen and (min-width: 600px) {
+    font-size: 1.5rem;
+    color: c.$colorWhite;
+  }
+}
+
+.field__input[type="text"]:focus, .field__input[type="tel"]:focus, .field__input[type="email"]:focus, .field__input[type="textarea"]:focus, .field__input[type="submit"] {
+  font-size: 1rem;
+  @media (min-width: 768px) {
+    border-color: c.$colorLighterBlue;
+    font-size: 1.2rem;
+  }
+}
+
+.wpcf7-form {
+  margin: 5%;
+  @media (min-width: 768px) {
+    margin: 5%;
+  }
+}
+
+.field .message {
+
+  @media (min-width: 768px) {
+    padding-top: 10px;
+  }
+}
+
+.field input[type="submit"] {
+  background-color: c.$colorLighterBlue;
+  @include f.Poppins-Regular;
+  color: c.$colorBG;
+  text-transform: uppercase;
+  border-radius: 32px;
+  border: none;
+  padding: 16px 23px;
+  margin: 5% 0;
+  text-align: center;
+}

@@ -1,0 +1,95 @@
+@use "../../../utils/fonts" as f;
+@use "../../../visuals/buttons" as b;
+@use "../../../visuals/colors" as c;
+
+
+.template_projects {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  gap: 2rem;
+  padding: 2rem;
+  @media screen and (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  &__title {
+    @include f.Poppins-Bold;
+    font-size: 2rem;
+    margin: 2% 10%;
+  }
+}
+
+.template_project__card {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+  @media screen and (min-width: 600px) {
+    max-width: 30%;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    color: c.$colorBlack;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  &-title {
+    @include f.Poppins-Regular;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+
+    &:hover {
+      @include f.Poppins-Bold;
+      color: c.$colorLighterBlue;
+    }
+  }
+
+  &-link {
+    @include f.Poppins-Regular;
+    font-size: 0.9rem;
+    color: c.$colorWhite;
+    display: block;
+    margin-top: 0.5rem;
+    text-decoration: none;
+
+    &:hover {
+      @include f.Poppins-Bold;
+      color: c.$colorLighterBlue;
+      font-size: 1rem;
+    }
+  }
+}
+
+.front-project__quote {
+  @include f.Poppins-Regular;
+  font-size: 1rem;
+  @media screen and (min-width : 600px){
+    @include f.Poppins-Regular;
+    font-size: 1.5rem;
+  }
+}

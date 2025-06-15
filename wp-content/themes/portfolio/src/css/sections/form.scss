@@ -1,0 +1,54 @@
+@use "../utils/fonts" as f;
+@use "../visuals/buttons" as b;
+@use "../visuals/colors" as c;
+
+.form {
+  margin: 3rem 5%;
+  max-width: 1024px;
+
+  @media (min-width: 1024px){
+    margin: 3rem auto 0;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  &__input {
+    tab-size: 150;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &__input {
+    font-size: 1rem;
+    @include f.Montserrat-Light;
+
+    @media (min-width: 768px) {
+    font-size: 2rem;
+    }
+  }
+
+  &__label {
+    @include f.Montserrat-Bold;
+    font-size: 1.25rem;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.field:focus {
+  outline: none;
+}
+

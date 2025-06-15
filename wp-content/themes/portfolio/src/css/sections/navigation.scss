@@ -1,0 +1,176 @@
+@use "../utils/fonts" as f;
+@use "../visuals/buttons" as b;
+@use "../visuals/colors" as c;
+
+.nav__toggle {
+  display: none;
+}
+
+.nav__burger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  margin: 1rem;
+  z-index: 20;
+
+  &.nav_h {
+    font-size: 2rem;
+    @include f.Poppins-Bold;
+  }
+
+  span {
+    height: 3px;
+    background: c.$colorWhite;
+    border-radius: 2px;
+    display: block;
+  }
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+.nav__container {
+  display: none;
+  flex-direction: column;
+  background-color: c.$colorLightBlue;
+  padding: 3rem 1rem;
+  list-style: none;
+  z-index: 10;
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  right: 0;
+  height: 100vh;
+
+  &_item {
+    text-align: center;
+    margin: 5% ;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    font-size: 2rem;
+    gap: 3rem;
+
+    @media (min-width: 600px) {
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+      border: none;
+    }
+  }
+
+  &_link {
+    color: c.$colorWhite;
+    text-decoration: none;
+    @include f.Poppins-Bold;
+    font-size: 1rem;
+    line-height: 1.2;
+    padding: 0.5rem 0;
+    display: inline-block;
+
+    @media (min-width: 600px) {
+      color: c.$colorWhite;
+      padding: 0.5rem 0;
+      letter-spacing: 0.1rem;
+      line-height: 2rem;
+    }
+
+    &--active {
+      text-decoration: underline 3px solid;
+      border-radius: 10px;
+      text-decoration-color: c.$colorLighterBlue;
+    }
+
+    &:hover {
+      @media (min-width: 600px) {
+        text-decoration: underline 3px solid;
+        border-radius: 10px;
+        text-decoration-color: c.$colorLighterBlue;
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0.5rem 5%;
+    margin: 1rem auto;
+    list-style-type: none;
+    align-items: center;
+    @include f.Montserrat-Regular;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    border-radius: 32px;
+    max-width: 100%;
+    background-color: #27282F;
+    border: 1px solid #35373D;
+    position: static;
+  }
+}
+
+#menu-toggle:checked ~ .nav__container {
+  display: flex;
+}
+
+
+.nav {
+  @media (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+
+.clickable_img {
+  display: none;
+  @media (min-width: 600px) {
+    display: block;
+    position: absolute;
+    left: 3rem;
+    top: 2rem;
+    max-width: 6rem;
+    height: auto;
+  }
+}
+
+.nav__container a.nav__container_link {
+  opacity: 1;
+}
+
+.header {
+  z-index: 10;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.logo-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: url("/wp-content/themes/portfolio/src/img/logo-github.svg");
+    width: 24px;
+    height: 24px;
+  }
+}

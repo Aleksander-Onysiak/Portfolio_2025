@@ -1,0 +1,62 @@
+@use "../../utils/fonts" as f;
+@use "../../visuals/buttons" as b;
+@use "../../visuals/colors" as c;
+
+.grid-container {
+  margin: 5rem 5% 0;
+  max-width: 1200px;
+
+  @media (min-width: 1024px) {
+    margin: 10rem auto;
+  }
+
+  &__header {
+    margin-bottom: 2rem;
+
+    &-title {
+      @include f.Montserrat-Bold;
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(100%, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+
+  @media screen and (min-width: 600px) {
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+  }
+}
+
+.grid-card {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: solid 1px c.$colorWhite;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &-header-title {
+    @include f.Poppins-Bold;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  &-description {
+    @include f.Poppins-Light;
+    font-size: 1rem;
+    color: c.$colorWhite;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+}
